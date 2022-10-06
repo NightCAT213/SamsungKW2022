@@ -1,47 +1,16 @@
 package com.samsung.learning;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        byte a = -128;
-        short b = 20000;
-        int c = 2000000;
-        long d = 200000000l;
-        System.out.println(a);
+        int ggg = 2; // золотое сочетание клавиш shift+f6
+        System.out.println(ggg);
 
-        float e = 1.636456565655555555555555555555555555555555555555555555f;
-        double f = 1.5667675675675675676575;
+        Scanner scanner = new Scanner(System.in);
+        double x = scanner.nextInt();
+        double y = scanner.nextInt();
 
-        // а это комментарий
-        boolean g = false;
-        System.out.println(g);
-
-        char s = 97; // только в одинарных кавычках
-        System.out.println(s);
-
-        System.out.println((char)(s + 1)); // приведение типов, унарная операция (когда только один аргумент)
-        // приведение типов, то есть изменение типа
-
-        int q = 1, w = 2;
-        double res;
-
-        res = w / q;
-
-        System.out.println(res);
-
-        res += 1;
-        res -= 1;
-
-        System.out.println((int) res);
-
-        System.out.println(q++);
-        System.out.println(q);
-
-        System.out.println(++q);
-        System.out.println(q);
-
-
-        /* tyuytutu
-        [p[[opoipipip
-        а так многострочные кавычки пишутся*/
+        String res = (y > 0 && x * x + y * y > 4 && x < 2 && y < x) ? "YES" : "NO";
     }
 }
