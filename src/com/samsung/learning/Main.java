@@ -1,50 +1,36 @@
 package com.samsung.learning;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        /*System.out.println("");
-
-        System.out.print("ddeded");
-        System.out.print("ddeded\n");
-        System.out.print("ddeded\n");
-
-        double adouble = 3.1432323232233232;
-        System.out.printf("%.5f\n", adouble);
-        System.out.printf("3 знака: %.3f | 5 знаков: %.5f", adouble, adouble);
-
-
-        int n = scanner.nextInt();
-
-        while (n < 100) {
-            System.out.println(n);
-            n++;
+        for (double i = 0; i < 100; i = i + 0.5) {
+            System.out.println(i);
         }
 
-        do {
-            System.out.println(n);
-        } while (n < 100);*/
+        // бесконечный цикл
+        /*for (;;) {
+            System.out.println(1);
+            if () break;
+        }*/
+
+        // массивы
+
+        int[] array;
+        array = new int[10]; // добавление нулей - пустых значений
+
+        array[9] = 10;
+        array[5] = -100;
 
 
-        // задача
-        int n = 0;
-        int count = 0;
-
-        do {
-            n = scanner.nextInt();
-            count++;
-        } while (n >= 0);
-        System.out.println(count);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
 
 
+        int[] array2 = new int[100];
 
-        // continue переходит на следующую итерацию, не выполняя ту часть программы, идущую после continue
-
-        // Math.random() выдает рандомное число от 0 до 1, не включая 1
-
-        // break завершает цикл
+        for (int i = 0; i < array2.length; i++) {
+            array2[i] = (int) (Math.random() * 100);
+            System.out.println(array2[i] + " ");
+        }
     }
 }
