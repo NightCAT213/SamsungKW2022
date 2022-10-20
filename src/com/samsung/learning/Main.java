@@ -1,36 +1,42 @@
 package com.samsung.learning;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        for (double i = 0; i < 100; i = i + 0.5) {
+        // в начале была задача
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] array = new int[n];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = sc.nextInt();
+        }
+
+
+        for (int i: array) { // для всех элементов из массива
             System.out.println(i);
         }
 
-        // бесконечный цикл
-        /*for (;;) {
-            System.out.println(1);
-            if () break;
-        }*/
 
-        // массивы
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(sum(a, b));
+    }
 
-        int[] array;
-        array = new int[10]; // инициализация массива стандартными значениями определённого типа
+    public static int sum(int a, int b) {
+        return a + b;
+    }
 
-        array[9] = 10;
-        array[5] = -100;
-
-
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+    public static void printArray(int[] array) {
+        System.out.println("[");
+        for (int i = 0; i < array.length - 1; i++) {
+            System.out.println(array[i] + ", ");
         }
+        System.out.println(array[array.length - 1] + "]");
+    }
 
-
-        int[] array2 = new int[100];
-
-        for (int i = 0; i < array2.length; i++) {
-            array2[i] = (int) (Math.random() * 100);
-            System.out.println(array2[i] + " ");
-        }
+    public static int max(int a, int b) {
+        return a > b ? a : b;
     }
 }
