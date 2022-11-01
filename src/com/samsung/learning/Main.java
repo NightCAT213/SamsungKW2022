@@ -1,30 +1,27 @@
 package com.samsung.learning;
 
+import com.samsung.learning.Person;
+
 public class Main {
     public static void main(String[] args) {
-        int arr2[][] = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
-        };
+        Person person = new Person();
+        person.name = "Valera";
+        person.age = 18;
 
-        System.out.println(arr2[1][2]);
+        Person person1 = new Person();
+        person1.name = "Kolya";
+        person1.age = 14;
+        // if private
+        // Person person = new Person("Sasha", 17);
 
+        person.printInfo();
+        person.birthday();
+        person.printInfo();
 
-        int[][] arr = new int[5][4];
-        for (int j = 0; j < arr.length; j++) {
-            for (int i = 0; i < arr[j].length; i++) {
-                arr[j][i] = (int) (Math.random() * 100);
-            }
-        }
-        for (int j = 0;  j < arr.length; j++) {
-            for (int i = 0; i < arr[j].length; i++) {
-                System.out.print(arr[j][i] + "\t");
-            }
-            System.out.println("\n");
-        }
-        for (int i = 0; i < arr[i].length; i++) {
-            System.out.print(arr[i][i] + " ");
-        }
+        person1.printInfo();
+
+        // Integer
+        Integer a = 1;
+        String s = a.toString();
     }
 }
