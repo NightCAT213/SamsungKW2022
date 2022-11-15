@@ -1,16 +1,28 @@
 package com.samsung.learning;
 
-import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Main {
+
+    public static Logger logger;
+
     public static void main(String[] args) {
-        int ggg = 2; // золотое сочетание клавиш shift+f6
-        System.out.println(ggg);
+        String str = "ferfe";
+        String str1 = "ferfe";
+        String str2 = new  String("ferfe");
+        System.out.println(str == str2);  // сравнение кодов переменных
+        System.out.println(str == str1);  // сравнение кодов переменных
+        System.out.println(str.equals(str2));  // сравнение значений
 
-        Scanner scanner = new Scanner(System.in);
-        double x = scanner.nextInt();
-        double y = scanner.nextInt();
+        String[] arr = str.split("e");
+        String str3 = str.replace("f", "j");
+        System.out.println(arr[0]);
+        System.out.println(str3);
 
-        String res = (y > 0 && x * x + y * y > 4 && x < 2 && y < x) ? "YES" : "NO";
+        logger = Logger.getLogger(Main.class.getName());
+        System.out.println(logger);
+        logger.log(Level.WARNING, "Старт приложения");
+        logger.log(Level.WARNING, "Конец приложения");
     }
 }
